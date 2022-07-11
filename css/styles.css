@@ -130,8 +130,17 @@ h1, h2, h3, h4, h5, h6, p, ul {
 }
 
 .kontacts-heder .link:hover,
-.kontacts-heder .link:focus {
+.kontacts-heder .link:focus,
+.konvert:hover, 
+.kontacts-heder .link:hover .konvert,
+.konvert:focus, 
+.kontacts-heder .link:focus .konvert,
+.smartphone:hover,
+.kontacts-heder .link:hover .smartphone,
+.smartphone:focus,
+.kontacts-heder .link:focus .smartphone { 
     color: var(--accent-color);
+    fill: var(--accent-color);
 }
 
 .konvert, .smartphone {
@@ -141,15 +150,6 @@ h1, h2, h3, h4, h5, h6, p, ul {
     margin-bottom: auto;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-
-.konvert:hover,
-.smartphone:hover,
-.konvert:focus,
-.smartphone:focus {
-    fill: var(--accent-color);
-}
-
 
 .section {
     padding-top: 94px;
@@ -238,7 +238,12 @@ h1, h2, h3, h4, h5, h6, p, ul {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
-}
+    opacity: 1;
+    visibility: visible;
+    transition-property: visibility opacity;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
 .backdrop.is-hidden {
     opacity: 0;
